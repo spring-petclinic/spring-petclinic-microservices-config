@@ -1,0 +1,11 @@
+server:
+  port: 8080
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    vets-service: /vet/**
+    visits-service: /visit/**
+    clients-service: /client/**
+
+spring.resources.static-locations: classpath:/static/,file:springboot-petclinic-client/src/,file:springboot-petclinic-client/bower_components/
