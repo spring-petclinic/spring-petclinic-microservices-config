@@ -20,6 +20,7 @@ management.contextPath: /manage
 logging.level.org.springframework: INFO
 
 server:
+  port: 0
   compression:
     enabled: true
     mime-types: application/json,text/css,application/javascript
