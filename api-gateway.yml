@@ -15,5 +15,3 @@ server:
 
 # Internationalization
 spring.messages.basename: messages/messages
-
-spring.resources.static-locations: classpath:/static/,file:spring-petclinic-ui/src/,file:spring-petclinic-ui/bower_components/
