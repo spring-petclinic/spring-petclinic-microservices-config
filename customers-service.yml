@@ -1,4 +1,16 @@
-﻿eureka:
+﻿spring:
+  profiles: default
+eureka:
   instance:
     # enable to register multiple app instances with a random server port
     instance-id: ${spring.application.name}:${random.uuid}
+
+---
+spring:
+  profiles: docker
+server:
+  port: 8081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/

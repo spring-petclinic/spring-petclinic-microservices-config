@@ -18,6 +18,3 @@ management.contextPath: /manage
 
 # Logging
 logging.level.org.springframework: INFO
-
-server:
-  port: 0
