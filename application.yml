@@ -13,8 +13,5 @@ spring:
 # JPA
 spring.jpa.hibernate.ddl-auto: none
 
-# Actuator / Management
-management.contextPath: /manage
-
 # Logging
 logging.level.org.springframework: INFO

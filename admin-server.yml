@@ -1,0 +1,7 @@
+server:
+  port: 9090
+
+spring:
+  boot:
+    admin:
+      url: http://${HOST_NAME:localhost}:${server.port}
