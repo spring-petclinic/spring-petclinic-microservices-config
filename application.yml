@@ -1,5 +1,8 @@
 # COMMON APPLICATION PROPERTIES
 
+# start services on random port by default
+server.port: 0
+
 # database init, supports mysql too
 petclinic.database: hsqldb
 spring:
