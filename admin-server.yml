@@ -1,7 +1,10 @@
 server:
   port: 9090
 
+---
 spring:
-  boot:
-    admin:
-      url: http://${HOST_NAME:localhost}:${server.port}
+  profiles: docker
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
