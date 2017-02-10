@@ -16,5 +16,8 @@ spring:
 # JPA
 spring.jpa.hibernate.ddl-auto: none
 
+# Spring Boot 1.5 makes actuator secure by default
+management.security.enabled: false
+
 # Logging
 logging.level.org.springframework: INFO
