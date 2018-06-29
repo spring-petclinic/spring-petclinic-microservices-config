@@ -19,5 +19,10 @@ spring.jpa.hibernate.ddl-auto: none
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
 
+# Temporary hack required by the Spring Boot 2 / Spring Cloud Finchley branch
+# Waiting issue https://github.com/spring-projects/spring-boot/issues/13042
+spring.cloud.refresh.refreshable: false
+
+
 # Logging
 logging.level.org.springframework: INFO
