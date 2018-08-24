@@ -3,12 +3,12 @@
 # start services on random port by default
 server.port: 0
 
-# database init, supports mysql too
+# embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: hsqldb
 spring:
   datasource:
-    schema: classpath*:db/${petclinic.database}/schema.sql
-    data: classpath*:db/${petclinic.database}/data.sql
+    schema: classpath*:db/hsqldb/schema.sql
+    data: classpath*:db/hsqldb/data.sql
   sleuth:
     sampler:
       percentage: 1.0
@@ -26,3 +26,15 @@ spring.cloud.refresh.refreshable: false
 
 # Logging
 logging.level.org.springframework: INFO
+
+
+---
+spring:
+  profiles: mysql
+  datasource:
+    schema: classpath*:db/mysql/schema.sql
+    data: classpath*:db/mysql/data.sql
+    url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
+    username: root
+    password: petclinic
+    initialization-mode: ALWAYS
