@@ -9,7 +9,7 @@ eureka:
 spring:
   profiles: docker
   zipkin:
-    baseUrl: http://zipkinserver/
+    baseUrl: http://tracing-server:9411
 server:
   port: 8082
 eureka:
