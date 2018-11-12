@@ -4,7 +4,6 @@
 server.port: 0
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
-petclinic.database: hsqldb
 spring:
   datasource:
     schema: classpath*:db/hsqldb/schema.sql
