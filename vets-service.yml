@@ -5,7 +5,9 @@
 
 ---
 spring:
-  profiles: default
+  config:
+    activate:
+      on-profile: default
 eureka:
   instance:
     # enable to register multiple app instances with a random server port
@@ -13,7 +15,9 @@ eureka:
 
 ---
 spring:
-  profiles: docker
+  config:
+    activate:
+      on-profile: docker
   zipkin:
     baseUrl: http://tracing-server:9411
 server:
