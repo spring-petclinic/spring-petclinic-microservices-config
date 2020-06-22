@@ -20,9 +20,10 @@ spring:
       allow-override: true
       # Override configuration with any local property source
       override-none: true
-
-# JPA
-spring.jpa.hibernate.ddl-auto: none
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
 
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
