@@ -1,7 +1,10 @@
 # COMMON APPLICATION PROPERTIES
 
-# start services on random port by default
-server.port: 0
+server:
+  # start services on random port by default
+  port: 0
+  # The stop processing uses a timeout which provides a grace period during which existing requests will be allowed to complete but no new requests will be permitted
+  shutdown: graceful
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 spring:
