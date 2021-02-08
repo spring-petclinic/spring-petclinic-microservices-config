@@ -22,7 +22,13 @@ spring:
   profiles: docker
   zipkin:
     baseUrl: http://tracing-server:9411
+  cloud:
+    config:
+      allowOverride: true
+      overrideNone: true 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+      
+      
