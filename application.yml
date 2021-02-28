@@ -56,7 +56,9 @@ management:
 
 ---
 spring:
-  profiles: mysql
+  config:
+    activate:
+      on-profile: mysql
   datasource:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql

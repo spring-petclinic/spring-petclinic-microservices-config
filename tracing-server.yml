@@ -11,7 +11,9 @@ eureka:
 
 ---
 spring:
-  profiles: docker
+  config:
+    activate:
+      on-profile: docker
 eureka:
   client:
     serviceUrl:
