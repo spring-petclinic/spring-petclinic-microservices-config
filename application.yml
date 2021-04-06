@@ -54,6 +54,18 @@ management:
       prometheus:
         enabled: true
 
+# Chaos Engineering
+chaos:
+  monkey:
+    enabled: true
+    watcher:
+      component: false
+      controller: false
+      # Defaults to potential issues with repositories - can be changed via REST API
+      repository: true
+      rest-controller: false
+      service: false
+
 ---
 spring:
   config:
