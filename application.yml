@@ -55,6 +55,7 @@ management:
         enabled: true
 
 # Chaos Engineering
+management.endpoint.chaosmonkey.enabled: true
 chaos:
   monkey:
     enabled: true
