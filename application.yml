@@ -55,9 +55,6 @@ management:
         enabled: true
 
 # Chaos Engineering
-spring:
-  profiles:
-    active: chaos-monkey
 chaos:
   monkey:
     enabled: true
