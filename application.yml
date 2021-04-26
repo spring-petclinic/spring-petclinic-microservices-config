@@ -55,6 +55,11 @@ management:
         enabled: true
 
 # Chaos Engineering
+---
+spring:
+  config:
+    activate:
+      on-profile: chaos-monkey      
 management.endpoint.chaosmonkey.enabled: true
 chaos:
   monkey:
@@ -62,7 +67,6 @@ chaos:
     watcher:
       component: false
       controller: false
-      # Defaults to potential issues with repositories - can be changed via REST API
       repository: true
       rest-controller: false
       service: false
