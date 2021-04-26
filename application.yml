@@ -67,7 +67,7 @@ chaos:
     watcher:
       component: false
       controller: false
-      repository: true
+      repository: false
       rest-controller: false
       service: false
 
