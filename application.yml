@@ -54,6 +54,9 @@ management:
     export:
       prometheus:
         enabled: true
+  tracing:
+    sampling:
+      probability: 1
 
 # Chaos Engineering
 ---
