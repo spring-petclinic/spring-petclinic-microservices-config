@@ -54,10 +54,10 @@ management:
     export:
       prometheus:
         enabled: true
-  management:
-    tracing:
-      sampling:
-        probability: 1
+  tracing:
+    sampling:
+      probability: 1
+
 # Chaos Engineering
 ---
 spring:
