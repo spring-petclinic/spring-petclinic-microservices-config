@@ -90,5 +90,6 @@ spring:
       data-locations: classpath*:db/mysql/data.sql
       init: ALWAYS
   jpa:
-    hibernate:
-      dialect: MySQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
