@@ -16,6 +16,8 @@ spring:
     sampler:
       probability: 1.0
   cloud:
+    loadbalancer:
+      configurations: health-check
     config:
       # Allow the microservices to override the remote properties with their own System properties or config file
       allow-override: true
