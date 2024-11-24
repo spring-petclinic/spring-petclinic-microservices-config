@@ -24,6 +24,9 @@ spring:
       on-profile: docker
   zipkin:
     baseUrl: http://tracing-server:9411
+  cloud:
+    loadbalancer:
+      configurations: health-check
 eureka:
   client:
     serviceUrl:
