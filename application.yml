@@ -12,6 +12,7 @@ spring:
     init:
       schema-locations: classpath*:db/hsqldb/schema.sql
       data-locations: classpath*:db/hsqldb/data.sql
+      mode: ALWAYS
   sleuth:
     sampler:
       probability: 1.0
