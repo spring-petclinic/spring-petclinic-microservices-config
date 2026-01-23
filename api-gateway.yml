@@ -1,11 +1,28 @@
-zuul:
-  prefix: /api
-  ignoredServices: '*'
-  routes:
-    vets-service: /vet/**
-    visits-service: /visit/**
-    customers-service: /customer/**
-    api-gateway: /gateway/**
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customers-service
+          uri: lb://customers-service
+          predicates:
+            - Path=/api/customers/**
+          filters:
+            - StripPrefix=2
+
+        - id: vets-service
+          uri: lb://vets-service
+          predicates:
+            - Path=/api/vets/**
+          filters:
+            - StripPrefix=2
+
+        - id: visits-service
+          uri: lb://visits-service
+          predicates:
+            - Path=/api/visits/**
+          filters:
+            - StripPrefix=2
+
 
 server:
   port: 8080
