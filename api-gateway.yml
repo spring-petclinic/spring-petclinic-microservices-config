@@ -5,23 +5,24 @@ spring:
         - id: customers-service
           uri: lb://customers-service
           predicates:
-            - Path=/api/customers/**
+            - Path=/api/customer/**
           filters:
             - StripPrefix=2
 
         - id: vets-service
           uri: lb://vets-service
           predicates:
-            - Path=/api/vets/**
+            - Path=/api/vet/**
           filters:
             - StripPrefix=2
 
         - id: visits-service
           uri: lb://visits-service
           predicates:
-            - Path=/api/visits/**
+            - Path=/api/visit/**
           filters:
             - StripPrefix=2
+
 
 
 server:
