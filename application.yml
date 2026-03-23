@@ -58,6 +58,11 @@ management:
     sampling:
       probability: 1
 
+eureka:
+  instance:
+    # Register IP address instead of hostname to avoid resolution failures on Windows
+    prefer-ip-address: true
+
 # Chaos Engineering
 ---
 spring:
