@@ -57,9 +57,6 @@ management:
   tracing:
     sampling:
       probability: 1
-  export:
-    zipkin:
-      endpoint: "http://127.0.0.1:9411/zipkin/"
 
 eureka:
   instance:
