@@ -57,9 +57,9 @@ management:
   tracing:
     sampling:
       probability: 1
-    export:
-      zipkin:
-        endpoint: "http://tracing-server:9411/api/v2/spans"
+  export:
+    zipkin:
+      endpoint: "http://127.0.0.1:9411/zipkin/"
 
 eureka:
   instance:
@@ -82,6 +82,17 @@ chaos:
       repository: false
       rest-controller: false
       service: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+management:
+  tracing:
+    export:
+      zipkin:
+        endpoint: "http://tracing-server:9411/api/v2/spans"
 
 ---
 spring:
